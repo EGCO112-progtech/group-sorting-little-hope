@@ -58,6 +58,8 @@ void selectionSort(int a[], int n) {
     display(a, n);
     printf("\n");
   }
+  printf("\n");
+  display(a, n);
 }
 
 void insertionSort(int x[], int n) {
@@ -73,4 +75,6 @@ void insertionSort(int x[], int n) {
     display(x, n);
     printf("\n");
   }
+  printf("\n");
+  display(x, n);
 }

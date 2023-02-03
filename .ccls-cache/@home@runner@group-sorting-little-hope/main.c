@@ -11,9 +11,11 @@ int main(int argc, char *argv[]) {
   a = (int *)malloc(sizeof(int) * n);
   for (i = 0; i < n; i++) {
     a[i] = atoi(argv[i + 2]);
-  }display(a, n);
+  }
+  display(a, n);
   if(strcmp(argv[1], "bubble")==0) bubbleSort(a, n);
   else if(strcmp(argv[1], "insertion")==0) insertionSort(a,n);
   else if(strcmp(argv[1], "selection")==0) selectionSort(a,n);
+  display(a)
   return 0;
 }
