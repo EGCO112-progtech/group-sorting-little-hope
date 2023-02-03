@@ -31,9 +31,10 @@ void bubbleSort(int a[], int n) {
       }
       display(a, n);
     }
+    printf("\n");
     if (sorted == 0)
       break;
-     printf("\n");
+     
   }
 }
 
@@ -58,9 +59,9 @@ void selectionSort(int a[], int n) {
     swap(&a[j], &a[mi]);
 
     // printf("Minimum is %d\n",m);
-    printf("\n");
-    display(a, n);
-  }
+   display(a, n);
+   printf("\n");
+  } 
 }
 
 void insertionSort(int x[], int n) {
