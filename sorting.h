@@ -11,6 +11,7 @@ void display(int a[],int n){
 }
 
 
+
 void swap(int *a,int *b){
  int temp;
   temp=*a;
@@ -19,7 +20,7 @@ void swap(int *a,int *b){
   
 }
 
-void bubbleSort(int a[],int n){
+void prebubbleSort(int a[],int n){
 
 int i,j;
 int sorted;
@@ -82,6 +83,7 @@ void insertionSort(int x[],int n){
     printf("\n");
   }
 }
+
 
 
 
