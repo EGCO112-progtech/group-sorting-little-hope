@@ -65,11 +65,8 @@ void insertionSort(int x[], int n) {
   int j, i;
   for (j = 1; j < n; j++) {
     int value = x[j];
-    for (i = j - 1; i >= 0; i--) {
-      if (value < x[i])
-        break;
-      else
-        x[i + 1] = x[i];
+    for (i = j - 1; i >= 0 && x[i] < value; i--) {
+      x[i + 1] = x[i];
       display(x, n);
     }
     x[i + 1] = value;
