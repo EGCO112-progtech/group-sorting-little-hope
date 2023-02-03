@@ -44,23 +44,23 @@ void selectionSort(int a[],int n)
 {
   int i,j;
 
-  int m = a[0];
+  //int m = a[0];
   int mi = 0; //ตัวเก็บค่าตน.น้อยสุด
   
   for(j=0;j<n-1;j++){ 
-    m=a[j];
+   // m=a[j];
     mi=j;
     
   for(i=j+1;i<n;i++){
-    if(m > a[i]){
-      m = a[i];
+    if(a[mi] < a[i]){
+     // m = a[i];
       mi = i;
       }  
 } 
     
   swap(&a[j],&a[mi]);
   
-  printf("Minimum is %d\n",m);
+  // printf("Minimum is %d\n",m);
   display(a,n);
   }
   }
