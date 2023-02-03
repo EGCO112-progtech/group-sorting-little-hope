@@ -1,5 +1,5 @@
 compile: main.c 
-	 gcc  main.c -o bubble
+	 gcc  main.c -o sort
 
 runSelection: selection
 	  ./selection
