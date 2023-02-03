@@ -62,11 +62,11 @@ void selectionSort(int a[],int n)
   int m = a[0];
   int mi = 0; //ตัวเก็บค่าตน.น้อยสุด
   
-  for(j=0;j>n-1;j++){ 
+  for(j=0;j<n-1;j++){ 
     m=a[j];
     mi=j;
     
-  for(i=j+1;i>n;i++){
+  for(i=j+1;i<n;i++){
     if(m > a[i]){
       m = a[i];
       mi = i;
@@ -86,7 +86,7 @@ void insertionSort(int x[],int n){
   for(j = 1; j < n; j++){
     int value = x[j];
   for(i = j-1; i>=0; i--){
-    if(value > x[i])
+    if(value < x[i])
       break;
     else
       x[i+1] = x[i];
