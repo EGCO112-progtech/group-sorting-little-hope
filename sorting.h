@@ -10,21 +10,7 @@ void display(int a[],int n){
   
 }
 
-void selectionSort(int data[], int length) 
-{ 
-	int i, j, m, mi; 
-	
-     display(data,length);
-     
-	
-} 
 
-
-
-void insertion(int a[],int n){
-
-
-}
 
 void swap(int *a,int *b){
  int temp;
@@ -34,7 +20,7 @@ void swap(int *a,int *b){
   
 }
 
-void bubbleSort(int a[],int n){
+void prebubbleSort(int a[],int n){
 
 int i,j;
 int sorted;
@@ -43,7 +29,7 @@ for(i = 0; i<n-1; i++){
   //printf("ROUND %d\n",i);
   sorted = 0;
   for(j=0;j < n-1-i; j++){
- if(a[j] > a[j+1]){
+ if(a[j] < a[j+1]){
   swap(&a[j],&a[j+1]);
    sorted = 1;
    }
@@ -59,23 +45,23 @@ void selectionSort(int a[],int n)
 {
   int i,j;
 
-  int m = a[0];
+  //int m = a[0];
   int mi = 0; //ตัวเก็บค่าตน.น้อยสุด
   
-  for(j=0;j>n-1;j++){ 
-    m=a[j];
+  for(j=0;j<n-1;j++){ 
+   // m=a[j];
     mi=j;
     
-  for(i=j+1;i>n;i++){
-    if(m > a[i]){
-      m = a[i];
+  for(i=j+1;i<n;i++){
+    if(a[mi] < a[i]){
+     // m = a[i];
       mi = i;
       }  
 } 
     
   swap(&a[j],&a[mi]);
   
-  printf("Minimum is %d\n",m);
+  // printf("Minimum is %d\n",m);
   display(a,n);
   }
   }
@@ -86,7 +72,7 @@ void insertionSort(int x[],int n){
   for(j = 1; j < n; j++){
     int value = x[j];
   for(i = j-1; i>=0; i--){
-    if(value > x[i])
+    if(value < x[i])
       break;
     else
       x[i+1] = x[i];
@@ -97,6 +83,7 @@ void insertionSort(int x[],int n){
     printf("\n");
   }
 }
+
 
 
 
